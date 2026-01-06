@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TodoApp
 
-## Getting Started
+シンプルで使いやすい Todo アプリケーションです。タスクの追加、完了、削除、そして完了したタスクを未完了に戻す機能を備えています。
 
-First, run the development server:
+## 機能
+
+- タスクの追加
+- タスクの完了
+- タスクの削除
+- 完了したタスクを未完了に戻す
+- 未完了と完了のタスクを分けて表示
+
+## 技術スタック
+
+- **Next.js** 15.1.2 - React フレームワーク
+- **React** 19.0.0 - UI ライブラリ
+- **TypeScript** - 型安全な開発
+- **Tailwind CSS** - スタイリング
+- **Turbopack** - 高速なビルドツール
+
+## セットアップ
+
+### 前提条件
+
+- Node.js (推奨: v18 以上)
+- npm または yarn
+
+### インストール
+
+1. リポジトリをクローン
+
+```bash
+git clone <repository-url>
+cd TodoApp
+```
+
+2. 依存関係をインストール
+
+```bash
+npm install
+# または
+yarn install
+```
+
+### 開発サーバーの起動
 
 ```bash
 npm run dev
-# or
+# または
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いてアプリケーションを確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## スクリプト
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - 開発サーバーを起動（Turbopack 使用）
+- `npm run build` - プロダクションビルドを作成
+- `npm run start` - プロダクションサーバーを起動
+- `npm run lint` - ESLint でコードをチェック
 
-## Learn More
+## プロジェクト構造
 
-To learn more about Next.js, take a look at the following resources:
+```
+TodoApp/
+├── app/
+│   ├── components/
+│   │   └── testTodo.tsx    # メインのTodoコンポーネント
+│   ├── layout.tsx           # ルートレイアウト
+│   ├── page.tsx             # ホームページ
+│   ├── globals.css          # グローバルスタイル
+│   └── style.css            # カスタムスタイル
+├── package.json
+└── README.md
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 使い方
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **タスクの追加**: 入力フィールドにタスクを入力して「追加」ボタンをクリック
+2. **タスクの完了**: 未完了のタスクの「完了」ボタンをクリックすると、完了リストに移動
+3. **タスクの削除**: 未完了のタスクの「削除」ボタンをクリック
+4. **タスクを戻す**: 完了したタスクの「戻す」ボタンをクリックすると、未完了リストに戻る
 
-## Deploy on Vercel
+## ライセンス
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+このプロジェクトはプライベートプロジェクトです。
